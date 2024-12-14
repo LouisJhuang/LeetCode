@@ -2,6 +2,8 @@ package com.leetcode.easy;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 public class TwoSumTest {
 
     @Test
@@ -12,9 +14,7 @@ public class TwoSumTest {
         TwoSum twoSum = new TwoSum();
 
         int [] answer = twoSum.solution(nums, target);
-        for(int num : answer) {
-            System.out.println("answer: " + num);
-        }
+        System.out.println(Arrays.toString(answer));
     }
 
 
