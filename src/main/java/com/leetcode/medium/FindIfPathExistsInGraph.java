@@ -30,7 +30,7 @@ public class FindIfPathExistsInGraph {
         Stack <Integer> stack = new Stack<>();
         // 4.2. 儲存已經走訪過的 node
         boolean[] visited = new boolean[n];
-        // 4.6. 先從 source 開始走, 所以 stack 放入起點, 並且 visited = true
+        // 4.3. 先從 source 開始走, 所以 stack 放入起點, 並且 visited = true
         stack.push(source);
         visited[source] = true;
 
@@ -42,7 +42,7 @@ public class FindIfPathExistsInGraph {
             if (currentNode ==  destination) {
                 return true;
             }
-            // 5.6. 走訪 graph 裡面的所有 value, 也就是相鄰 list
+            // 5.3. 走訪 graph 裡面的所有 value, 也就是相鄰 list
             for (Integer list : graph.get(currentNode)) {
                 // 如果這個 node 沒有走訪過, 那這裡就要標記為走訪過, 並且更新 stack, 做為下一輪的內容
                 if (!visited[list]) {
